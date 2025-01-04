@@ -28,8 +28,6 @@ app.get("/",(req,res) => {
     res.status(200).send("Server Check");
 });
 
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-
 // Utility function to generate JWT
 const generateToken = (userId, username) => {
   return jwt.sign({ userId, username }, process.env.JWT_SECRET, { expiresIn: '1h' });
