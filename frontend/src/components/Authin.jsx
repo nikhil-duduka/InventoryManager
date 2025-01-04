@@ -4,8 +4,8 @@ import { ChangeEvent, useState } from "react"
 import axios from  "axios"
 // import {BACKEND_URL} from "../config.ts"
 const BACKEND_URL = "http://localhost:5000";
-const type="signup";
-export const Auth = ()=>{
+const type="signin";
+export const Authin = ()=>{
     const navigate = useNavigate();
     const [postInputs,setPostInputs] = useState({
         name : "" ,
@@ -43,9 +43,9 @@ export const Auth = ()=>{
                     <LabelledInput label="Username" placeholder="Enter your username" onChange={(e)=>{
                         setPostInputs({...postInputs, name :e.target.value})
                     }}/>
-                    <LabelledInput label="Email" placeholder="Enter your email" onChange={(e)=>{
+                    {/* <LabelledInput label="Email" placeholder="Enter your email" onChange={(e)=>{
                         setPostInputs({...postInputs, email :e.target.value})
-                    }}/>
+                    }}/> */}
                     <LabelledInput label="password" type={"password"} placeholder="Enter Password" onChange={(e)=>{
                         setPostInputs({...postInputs, password :e.target.value})
                     }}/>
